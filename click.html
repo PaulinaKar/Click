@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Click</title>
+  <style>
+    * {
+      background-color: grey;
+      margin-left: auto;
+      margin-right: auto;
+      list-style-type: none;
+
+    }
+
+    button {
+      padding: 25px;
+      font-size: 25px;
+      font-weight: 800;
+      border-style: double;
+      border-color: darkgrey;
+    }
+
+    li {
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .big {
+      font-size: 30px
+    }
+  </style>
+</head>
+
+<body>
+  <button>Click</button>
+  <ul>
+
+  </ul>
+  <script>
+    let number = 1;
+    const btn = document.querySelector("button");
+    const list = document.querySelector("ul");
+
+
+    btn.addEventListener("click", function () {
+      const li = document.createElement("li");
+      li.textContent = number;
+
+
+      list.appendChild(li)
+      // number = number + 2;
+      if (number % 3 == 0) {
+        li.classList.add("big")
+      }
+      number += 2;
+    })
+  </script>
+</body>
+
+</html>
